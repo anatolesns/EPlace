@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Debug Page</title>
+</head>
+
+<body>
+	<div class="AlertContainer" id="alert-container"></div>
+
+	<div class="container">
+		<h1>Debug Dashboard</h1>
+
+		<section class="card">
+			<h2>Local Storage Tokens</h2>
+			<div class="token-section">
+				<h3>Access Token</h3>
+				<p id="token" class="token-text">{{ token }}</p>
+				<h3>Refresh Token</h3>
+				<p id="refresh_token" class="token-text">{{ refresh_token }}</p>
+			</div>
+			<div class="token-actions button-group">
+				<button id="deleteTokenBtn">Delete Access Token</button>
+				<button id="deleteRefreshTokenBtn">Delete Refresh Token</button>
+				<button id="clearTokens">Clear All Tokens</button>
+			</div>
+		</section>
+
+		<section class="card">
+			<h2>User Profile</h2>
+			<div class="StudentProfile">
+                <img src="" class="Avatar" id="profile-info-avatar" alt="User Avatar" />
+                <div class="TextContainer">
+                    <span class="Login" id="profile-info-login">no login</span>
+                    <span class="Quote" id="profile-info-quote"></span>
+                </div>
+			</div>
+			<div class="profile-actions button-group">
+				<button id="launchOIDC">Launch OIDC</button>
+				<button id="displayProfile">Display Profile Info</button>
+				<button id="hideProfile">Clear Profile Info</button>
+			</div>
+		</section>
+
+		<section class="card">
+			<h2>Error Simulation</h2>
+			<div class="error-actions button-group">
+				<button id="errorBtn">Generate Error Response</button>
+				<button id="invalidToken">Generate Invalid Token</button>
+				<button id="expiredTokenBtn">Generate Expired Token</button>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>
